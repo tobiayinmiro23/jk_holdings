@@ -1,0 +1,18 @@
+@media only screen and (max-height:646px) {
+    .sidebarOverflow {
+        height: 80%;
+        overflow-y: auto;
+    }
+}
+
+@media only screen and (max-height:562px) {
+    .sidebarOverflow {
+        height: 70%;
+    }
+}
+
+@media only screen and (max-height:385px) {
+    .sidebarOverflow {
+        height: 65%;
+    }
+}
