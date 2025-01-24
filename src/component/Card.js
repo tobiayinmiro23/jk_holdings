@@ -66,7 +66,7 @@ const Card = () => {
                     return <div key={item.id} className=' w-[fit-content] flex items-start mt-[1.5rem] p-[0.8rem] border-[1px] border-[#eae9e9] bg-white rounded-lg max-[1409px]:w-[48.5%] max-[731px]:w-[80%] max-[731px]:m-[auto] max-[731px]:mt-[2rem] max-[617px]:w-[90%] max-[539px]:w-[96%] max-[371px]:w-[98%] max-[371px]:p-[0.47rem]'>
                         <div className='flex items-start'>
                             <div className='max-[1409px]:w-[45%] max-[1270px]:w-[50%] max-[860px]:w-[53%] '>
-                                <Link to={`/DashBoard/PropertyDetail/${item.id}`}>
+                                <Link className='w-[fit-content]' to={`/DashBoard/PropertyDetail/${item.id}`}>
                                     <div className='w-[15rem] h-[12rem] max-[1409px]:w-[100%] max-[731px]:h-[13.5rem] max-[409px]:h-[13rem] max-[371px]:h-[12rem]'><img className='rounded-md w-[100%]' src={item.img} alt="" /></div>
                                 </Link>
                             </div>
