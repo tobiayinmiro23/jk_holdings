@@ -1,125 +1,128 @@
-import React from 'react'
-import Avatar from '@mui/material/Avatar';
-import AvatarGroup from '@mui/material/AvatarGroup';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import BedRoundedIcon from '@mui/icons-material/BedRounded';
-import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
-import clock from '../assets/clock.png'
-import { Link } from 'react-router-dom';
-import Img1 from '../assets/pexels-luis-yanez-57302-206172.jpg'
-import Img2 from '../assets/pexels-pixabay-53610.jpg'
-import Img3 from '../assets/pexels-pixabay-280216.jpg'
-import Img4 from '../assets/pexels-julia-kuzenkov-442028-1974596.jpg'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom';
+import DirectionsCarRoundedIcon from '@mui/icons-material/DirectionsCarRounded';
+import ElectricalServicesRoundedIcon from '@mui/icons-material/ElectricalServicesRounded';
+import PowerRoundedIcon from '@mui/icons-material/PowerRounded';
+import MapRoundedIcon from '@mui/icons-material/MapRounded';
+import GppGoodRoundedIcon from '@mui/icons-material/GppGoodRounded';
+import { BreadCrumb } from '../AllFiles';
+// import imgg from '../assets/'
 
+const cardData = [
+    {
+        id: 1,
+        img: '/image/pexels-luis-yanez-57302-206172.jpg',
+        title: " 1192 serenity residence",
+        type: '2 Flats',
+        price: 350000,
+        location: 'Maiduguri',
+        time: '2h ago Lorem ipsum dolor sit',
+        time: '12/22/2024'
+    },
+    {
+        id: 2,
+        img: '/image/pexels-pixabay-53610.jpg',
+        title: 'Golden deluxe luxury residence',
+        type: '4 Flats',
+        price: 950000,
+        location: 'Port hart court',
+        time: '2h ago'
+    },
+    {
+        id: 3,
+        img: '/image/pexels-pixabay-280216.jpg',
+        title: 'Executive luxury suite.',
+        type: '3 Flats',
+        price: 450000,
+        location: 'Lagos',
+        time: '2h ago'
+    },
+    {
+        id: 4,
+        img: '/image/pexels-julia-kuzenkov-442028-1974596.jpg',
+        title: '303 bachelor row apartment',
+        type: '1 Flats',
+        price: 190000,
+        location: 'Rivers',
+        time: '2h ago'
+    },
+]
 
+const ProperytDetail = () => {
+    const [houseDetails, sethouseDetails] = useState([])
+    const [houseTitle, sethouseTitle] = useState('')
+    const [houseImg, sethouseImg] = useState('')
 
-const Card = () => {
-    const cardData = [
-        {
-            id: 1,
-            // img: '/image/pexels-luis-yanez-57302-206172.jpg',
-            img: Img1,
-            title: " 1192 serenity residence",
-            type: '2 Flats',
-            price: 350000,
-            location: 'Maiduguri',
-            time: '2h ago Lorem ipsum dolor sit',
-            time: '12/22/2024'
-        },
-        {
-            id: 2,
-            img: '/image/pexels-pixabay-53610.jpg',
-            title: 'Golden deluxe luxury residence',
-            img: Img2,
-            type: '4 Flats',
-            price: 950000,
-            location: 'Port hart court',
-            time: '2h ago'
-        },
-        {
-            id: 3,
-            img: '/image/pexels-pixabay-280216.jpg',
-            img: Img3,
-            title: 'Executive luxury suite.',
-            type: '3 Flats',
-            price: 450000,
-            location: 'Lagos',
-            time: '2h ago'
-        },
-        {
-            id: 4,
-            img: '/image/pexels-julia-kuzenkov-442028-1974596.jpg',
-            img: Img4,
-            title: '303 bachelor row apartment',
-            type: '1 Flats',
-            price: 190000,
-            location: 'Rivers',
-            time: '2h ago'
-        },
-    ]
+    const id = useParams().id
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        let data = cardData.filter((item) => item.id == id)
+        data.map(item => {
+            sethouseTitle(item.title)
+            sethouseImg(item.img)
+        })
+        sethouseDetails(data)
 
+    }, [])
     return (
-        <div className='w-[100%] flex items-start justify-evenly flex-wrap p-[0.8rem] max-[1019px]:px-[0rem] max-[731px]:block' >
-            {
-                cardData.map(item => {
-
-                    return <div key={item.id} className=' w-[fit-content] flex items-start mt-[1.5rem] p-[0.8rem] border-[1px] border-[#eae9e9] bg-white rounded-lg max-[1409px]:w-[48.5%] max-[731px]:w-[80%] max-[731px]:m-[auto] max-[731px]:mt-[2rem] max-[617px]:w-[90%] max-[539px]:w-[96%] max-[371px]:w-[98%] max-[371px]:p-[0.47rem]'>
-                        <div className='flex items-start'>
-                            <div className='max-[1409px]:w-[45%] max-[1270px]:w-[50%] max-[860px]:w-[53%] '>
-                                <Link className='w-[fit-content]' to={`/DashBoard/PropertyDetail/${item.id}`}>
-                                    <div className='w-[15rem] h-[12rem] max-[1409px]:w-[100%] max-[731px]:h-[13.5rem] max-[409px]:h-[13rem] max-[371px]:h-[12rem]'><img className='rounded-md w-[100%]' src={item.img} alt="" /></div>
-                                </Link>
+        <div className='px-[2rem] bg-[#f9f9f9]  py-[1rem] max-[872px]:px-[1rem]'>
+            <div className='mt-[1rem]'><BreadCrumb /></div>
+            <h1></h1>
+            <h1 className='text-[1.7rem] mb-[2rem] text-center'>{houseTitle}</h1>
+            <div className='w-[100%] m-[auto] rounded-md h-[30rem] max-[617px]:h-[25rem] max-[480px]:h-[20rem] max-[390px]:h-[17rem]'><img className='rounded-md' src={houseImg} alt="" /></div>
+            <h2 className='text-[1.4rem] font-semibold my-[1.3rem]'>Facts about property</h2>
+            <div>
+                {
+                    houseDetails.map(item => {
+                        return <div key={item.id} className='flex items-center flex-wrap'>
+                            <div className='text-[darkblue] mr-[1.5rem] mb-[0.8rem] max-[511px]:mr-[2.5rem] max-[419px]:mr-[1.5rem] max-[385px]:mr-[1.2rem] '>
+                                <div className='text-[1.2rem] font-semibold my-[0.3rem] max-[385px]:text-[1.03rem]'>Rooms (bed)</div>
+                                <p className='max-[385px]:text-[0.97rem]' >{item.type}</p>
                             </div>
-                            <div className='w-[17rem] ml-[0.9rem] max-[1409px]:w-[55%] max-[1279px]:ml-[0.3rem] max-[1270px]:w-[50%] max-[860px]:w-[47%]'>
-                                <div className='flex items-center justify-between mb-[1.4rem]'>
-                                    <h1 className='text-[1.3rem] font-semibold w-[14rem] h-[1.8rem] overflow-hidden max-[1243px]:text-[1.18rem]'>{item.title}</h1>
-                                    <MoreVertIcon className='mt-[0.3rem] z-[50] max-[1243px]:mt-[0.2rem]' />
-                                </div>
-                                <Link to={`/DashBoard/PropertyDetail/${item.id}`}>
-                                    <div className='flex items-center justify-between mb-[1.6rem] mt-[1.9rem] max-[1182px]:mb-[1.2rem] max-[1182px]:mt-[1.2rem] max-[371px]:mb-[0.8rem]'>
-                                        <div className='flex items-center'>
-                                            <BedRoundedIcon className='text-[#252525]' />
-                                            <p className=''>{item.type}</p>
-                                        </div>
-                                        <div className='flex items-center'>
-                                            <div className='w-[0.45rem] h-[0.45rem] bg-[black] mr-[0.1rem] rounded-full'></div>
-                                            <p className=''>Rent</p>
-                                        </div>
-                                    </div>
-                                    <div className='flex items-start justify-start mb-[0.7rem] max-[1182px]:block '>
-                                        <div className='flex items-end h-[1.3rem] mt-[0.3rem] overflow-hidden max-[731px]:mb-[1rem]'>
-                                            <h2 className='text-[red] text-[1.01rem] font-bold max-[1279px]:text-[0.9rem]'>N{item.price.toLocaleString()}</h2>
-                                            <p className='text-[red] text-[0.87rem] max-[1279px]:text-[0.83rem]'>Annual</p>
-                                        </div>
-                                        <p className='text-[#534f4f] text-[0.9rem] ml-[auto] text-end w-[48%]  max-[1182px]:w-[100%] max-[1182px]:text-start max-[1182px]:mt-[0.2rem] max-[1182px]:ml-[-0.3rem] max-[371px]:mt-[-0.5rem]'><FmdGoodOutlinedIcon className='text-[#534f4fe3] mr-[0rem] max-[1182px]:mr-[-0.2rem]' />{item.location}</p>
-                                    </div>
-                                    <div className='border-[1px] border-[lightgray] mb-[0.7rem]  max-[409px]:mb-[0.4rem]'></div>
-                                    <div className='flex items-start justify-between mb-[0rem]'>
-                                        <div className='flex items-center w-[5.7rem] max-[1190px]:w-[5rem] max-[952px]:ml-[-0.23rem] max-[775px]:w-[3.8rem] max-[731px]:w-[4.86rem] max-[731px]:ml-[0rem] max-[731px]:mt-[0.08rem]'>
-                                            <div className='w-[0.9rem] h-[0.85rem] mt-[0.12rem] mx-[0.1rem] max-[952px]:mx-[0rem] max-[775px]:hidden max-[731px]:block max-[731px]:mt-[0.18rem] max-[409px]:hidden'>
-                                                <img src={clock} alt="clock img" />
-                                            </div>
-                                            <h6 className='text-[#534f4f] w-[fit-content] h-[1.4rem] overflow-hidden text-[0.91rem] mt-[0.15rem] max-[1190px]:text-[0.77rem] max-[986px]:text-[0.67rem] max-[986px]:h-[1.1rem] max-[986px]:mt-[0.2rem] max-[883px]:text-[0.72rem] max-[775px]:ml-[0.2rem] max-[731px]:text-[0.72rem] max-[731px]:ml-[0rem] max-[371px]:ml-[-0.27rem] max-[350px]:text-[0.67rem]'>{item.time}</h6>
-                                        </div>
-                                        <div className='flex items-center max-[1107px]:mr-[-0.7rem] max-[731px]:mr-[-0.5rem] max-[409px]:mr-[-0.7rem] max-[371px]:mr-[-0.42rem]'>
-                                            <p className='text-[#534f4f] text-[0.91rem] max-[1190px]:text-[0.77rem] max-[986px]:text-[0.73rem] max-[883px]:text-[0.79rem] max-[731px]:text-[0.8rem] max-[350px]:text-[0.7rem] max-[349px]:mr-[-0.079rem] max-[327px]:text-[0.63rem]'>Tenants</p>
-                                            <AvatarGroup max={3}>
-                                                <Avatar sx={{ width: '1.4rem', height: '1.4rem' }} alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-                                                <Avatar sx={{ width: '1.4rem', height: '1.4rem' }} alt="Travis Howard" src="images/7.jpeg" />
-                                                <Avatar sx={{ width: '1.4rem', height: '1.4rem' }} alt="Trevor Henderson" src="/static/images/avatar/5.jpg" />
-                                            </AvatarGroup>
-                                        </div>
-                                    </div>
-                                </Link>
+                            <div className='text-[darkblue] mr-[1.5rem] mb-[0.8rem] max-[511px]:mr-[2.5rem] max-[419px]:mr-[1.5rem] max-[385px]:mr-[1.2rem] '>
+                                <div className='text-[1.2rem] font-semibold my-[0.3rem] max-[385px]:text-[1.03rem]'>Bathrooms (baths)</div>
+                                <p className='max-[385px]:text-[0.97rem]' >2</p>
+                            </div>
+                            <div className='text-[darkblue] mr-[1.5rem] mb-[0.8rem] max-[511px]:mr-[2.5rem] max-[419px]:mr-[1.5rem] max-[385px]:mr-[1.2rem] '>
+                                <div className='text-[1.2rem] font-semibold my-[0.3rem] max-[385px]:text-[1.03rem]'>Price</div>
+                                <p className='max-[385px]:text-[0.97rem]' >{item.price}</p>
+                            </div>
+                            <div className='text-[darkblue] mr-[1.5rem] mb-[0.8rem] max-[511px]:mr-[2.5rem] max-[419px]:mr-[1.5rem] max-[385px]:mr-[1.2rem] '>
+                                <div className='text-[1.2rem] font-semibold my-[0.3rem] max-[385px]:text-[1.03rem]'>Neighborhood</div>
+                                <p className='max-[385px]:text-[0.97rem]' >{item.location}</p>
                             </div>
                         </div>
-                    </div>
+                    })
+                }
+            </div>
+            <div className='border-[1px] border-[#a6a6f9] my-[1.9rem]'></div>
+            <h2 className='text-[1.4rem] font-semibold mb-[1.3rem]'>Property Description</h2>
+            <p className='text-[darkblue] mb-[3rem]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, ex blanditiis quasi laborum tempora debitis enim quos mollitia sunt obcaecati voluptas veritatis. Quo optio rerum repellendus totam! Deserunt, nesciunt laboriosam! Nostrum, consectetur neque delectus ullam cumque, fuga soluta est repellat sapiente dolorem a eos esse vitae tempora! Animi modi natus enim aspernatur sequi culpa dicta fuga voluptatum repellat tempore molestias ducimus quam corporis quidem ratione sunt, debitis at, sapiente earum quae suscipit? Repellat laborum aspernatur tenetur similique, ut pariatur adipisci aperiam reprehenderit, labore quisquam quae natus incidunt. Cum sit sint excepturi corrupti fugit veritatis dolor?</p>
+            <div className='border-[1px] border-[#6060f8] my-[1.9rem]'></div>
+            <h2 className='text-[1.4rem] font-semibold mb-[1.3rem]'>Property Features</h2>
+            <div className='flex items-center flex-wrap mb-[4rem]'>
+                <div className='flex items-center mr-[3.5rem] mb-[1.85rem] max-[915px]:mr-[2.5rem] max-[415px]:mr-[1.5rem]'>
+                    <DirectionsCarRoundedIcon className='mr-[0.85rem] text-[darkblue] max-[415px]:mr-[0.34rem]' />
+                    <p className='text-[darkblue]'>Car Park</p>
+                </div>
+                <div className='flex items-center mr-[3.5rem] mb-[1.85rem] max-[915px]:mr-[2.5rem] max-[415px]:mr-[1.5rem]'>
+                    <ElectricalServicesRoundedIcon className='mr-[0.85rem] text-[darkblue] max-[415px]:mr-[0.34rem]' />
+                    <p className='text-[darkblue]'>Furnished</p>
+                </div>
+                <div className='flex items-center mr-[3.5rem] mb-[1.85rem] max-[915px]:mr-[2.5rem] max-[415px]:mr-[1.5rem]'>
+                    <MapRoundedIcon className='mr-[0.85rem] text-[darkblue] max-[415px]:mr-[0.34rem]' />
+                    <p className='text-[darkblue]'>Accessible Road</p>
+                </div>
+                <div className='flex items-center mr-[3.5rem] mb-[1.85rem] max-[915px]:mr-[2.5rem] max-[415px]:mr-[1.5rem]'>
+                    <GppGoodRoundedIcon className='mr-[0.85rem] text-[darkblue] max-[415px]:mr-[0.34rem]' />
+                    <p className='text-[darkblue]'>24/7 Security</p>
+                </div>
+            </div>
+            <div className='border-[1px] border-[#6060f8] my-[1.9rem]'></div>
 
-                })
-            }
-        </div >
+
+        </div>
     )
 }
 
-export default Card
-
+export default ProperytDetail
