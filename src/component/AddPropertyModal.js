@@ -36,6 +36,7 @@ const AddPropertyModal = ({ name }) => {
     const handleButton = () => {
         displayPopUpMessage('tenant successfully added', setpopUpMsg, setpopUpType, setdisplayPopUp, true)
         cancelPopUP(setdisplayPopUp, 500)
+        handleClose()
     }
     return (
         <div className=''>
