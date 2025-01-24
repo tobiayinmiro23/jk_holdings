@@ -55,6 +55,7 @@ const ProperytDetail = () => {
 
     const id = useParams().id
     useEffect(() => {
+        window.scrollTo(0, 0)
         let data = cardData.filter((item) => item.id == id)
         data.map(item => {
             sethouseTitle(item.title)
@@ -68,7 +69,7 @@ const ProperytDetail = () => {
             <div className='mt-[1rem]'><BreadCrumb /></div>
             <h1></h1>
             <h1 className='text-[1.7rem] mb-[2rem] text-center'>{houseTitle}</h1>
-            <div className='w-[100%] m-[auto] rounded-md h-[30rem]'><img className='rounded-md' src={houseImg} alt="" /></div>
+            <div className='w-[100%] m-[auto] rounded-md h-[30rem] max-[617px]:h-[25rem] max-[480px]:h-[20rem] max-[390px]:h-[17rem]'><img className='rounded-md' src={houseImg} alt="" /></div>
             <h2 className='text-[1.4rem] font-semibold my-[1.3rem]'>Facts about property</h2>
             <div>
                 {
