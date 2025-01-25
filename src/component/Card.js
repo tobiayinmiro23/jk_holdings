@@ -17,7 +17,6 @@ const Card = () => {
     const cardData = [
         {
             id: 1,
-            // img: '/image/pexels-luis-yanez-57302-206172.jpg',
             img: Img1,
             title: " 1192 serenity residence",
             type: '2 Flats',
@@ -28,7 +27,6 @@ const Card = () => {
         },
         {
             id: 2,
-            img: '/image/pexels-pixabay-53610.jpg',
             title: 'Golden deluxe luxury residence',
             img: Img2,
             type: '4 Flats',
@@ -38,7 +36,6 @@ const Card = () => {
         },
         {
             id: 3,
-            img: '/image/pexels-pixabay-280216.jpg',
             img: Img3,
             title: 'Executive luxury suite.',
             type: '3 Flats',
@@ -48,7 +45,6 @@ const Card = () => {
         },
         {
             id: 4,
-            img: '/image/pexels-julia-kuzenkov-442028-1974596.jpg',
             img: Img4,
             title: '303 bachelor row apartment',
             type: '1 Flats',
