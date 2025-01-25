@@ -33,6 +33,7 @@ export { default as Analytics } from './pages/Analytics';
 export { default as Dashboard } from './pages/Dashboard';
 export { default as SummaryCardLoader } from './component/Loaders/SummaryCard'
 export { default as RentDueLoader } from './component/Loaders/RentDue'
+export { default as PropertyDetailLoader } from './component/Loaders/PropertyDetailLoader'
 export { default as Loader } from './component/Loaders/Loader';
 export { default as CardLoader } from './component/Loaders/Card';
 export { default as NewPropertiesLoader } from './component/Loaders/NewProperties'
