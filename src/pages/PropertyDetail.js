@@ -6,7 +6,6 @@ import PowerRoundedIcon from '@mui/icons-material/PowerRounded';
 import MapRoundedIcon from '@mui/icons-material/MapRounded';
 import GppGoodRoundedIcon from '@mui/icons-material/GppGoodRounded';
 import { BreadCrumb } from '../AllFiles';
-// import imgg from '../assets/'
 
 const cardData = [
     {
