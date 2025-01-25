@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import DirectionsCarRoundedIcon from '@mui/icons-material/DirectionsCarRounded';
 import ElectricalServicesRoundedIcon from '@mui/icons-material/ElectricalServicesRounded';
-import PowerRoundedIcon from '@mui/icons-material/PowerRounded';
+import { loaderTimer } from '../helperFunction/loadingTimer'
 import MapRoundedIcon from '@mui/icons-material/MapRounded';
 import GppGoodRoundedIcon from '@mui/icons-material/GppGoodRounded';
-import { BreadCrumb } from '../AllFiles';
+import { BreadCrumb, PropertyDetailLoader } from '../AllFiles';
 
 const cardData = [
     {
@@ -51,6 +51,8 @@ const ProperytDetail = () => {
     const [houseDetails, sethouseDetails] = useState([])
     const [houseTitle, sethouseTitle] = useState('')
     const [houseImg, sethouseImg] = useState('')
+    const [imgLoading, setimgLoading] = useState(true)
+
 
     const id = useParams().id
     useEffect(() => {
@@ -61,14 +63,14 @@ const ProperytDetail = () => {
             sethouseImg(item.img)
         })
         sethouseDetails(data)
-
+        loaderTimer(setimgLoading, 700)
     }, [])
     return (
         <div className='px-[2rem] bg-[#f9f9f9]  py-[1rem] max-[872px]:px-[1rem]'>
             <div className='mt-[1rem]'><BreadCrumb /></div>
             <h1></h1>
             <h1 className='text-[1.7rem] mb-[2rem] text-center'>{houseTitle}</h1>
-            <div className='w-[100%] m-[auto] rounded-md h-[30rem] max-[617px]:h-[25rem] max-[480px]:h-[20rem] max-[390px]:h-[17rem]'><img className='rounded-md' src={houseImg} alt="" /></div>
+            {imgLoading ? <PropertyDetailLoader /> : <div className='w-[100%] m-[auto] rounded-md h-[30rem] max-[617px]:h-[25rem] max-[480px]:h-[20rem] max-[390px]:h-[17rem]'><img className='rounded-md' src={houseImg} alt="" /></div>}
             <h2 className='text-[1.4rem] font-semibold my-[1.3rem]'>Facts about property</h2>
             <div>
                 {
