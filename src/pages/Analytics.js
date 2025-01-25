@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react'
 import { OverviewAnalytics, PropertiesForRent, RevenueAnalytics, TenantsSummary, OverviewAnalyticsLoader, PropertiesForRentLoader, RevenueAnalyticsLoader, TenantsSummaryLoader } from '../AllFiles'
-
+import { loaderTimer } from '../helperFunction/loadingTimer'
 
 import { UsersContext } from '../context/UserContext'
 const Analytics = () => {
@@ -11,11 +11,6 @@ const Analytics = () => {
     const [revenueAnalyticsLoader, setrevenueAnalyticsLoader] = useState(true)
     const [tenantsSummaryLoader, settenantsSummaryLoader] = useState(true)
 
-    const loaderTimer = (setloading, time) => {
-        setTimeout(() => {
-            setloading(false)
-        }, time);
-    }
     useEffect(() => {
         loaderTimer(setoverviewAnalyticsLoader, 600)
         loaderTimer(setpropertiesForRentLoader, 400)
