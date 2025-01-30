@@ -6,6 +6,7 @@ import { loaderTimer } from '../helperFunction/loadingTimer'
 import MapRoundedIcon from '@mui/icons-material/MapRounded';
 import GppGoodRoundedIcon from '@mui/icons-material/GppGoodRounded';
 import { BreadCrumb, PropertyDetailLoader } from '../AllFiles';
+    window.scrollTo(0, 0)
 
 const cardData = [
     {
