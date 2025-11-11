@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from '../assets/undraw_under-construction_c2y1.png'
+import Img from '../assets/undraw_under-construction_c2y1.webp'
 
 const Message = () => {
     return (
@@ -9,5 +9,6 @@ const Message = () => {
         </div>
     )
 }
+
 
 export default Message
