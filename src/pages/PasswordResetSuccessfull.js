@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from '../AllFiles'
-import BgImg from '../assets/alexey-aladashvili-IMnQjDu1e5I-unsplash.jpg'
-import congrats from '../assets/congratulations.jpeg'
+import BgImg from '../assets/alexey-aladashvili-IMnQjDu1e5I-unsplash.webp'
+import congrats from '../assets/congratulations.webp'
 import { Link } from 'react-router-dom'
 
 
@@ -21,3 +21,4 @@ const PasswordResetSuccessfull = () => {
 }
 
 export default PasswordResetSuccessfull
+
