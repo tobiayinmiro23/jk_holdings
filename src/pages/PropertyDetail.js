@@ -11,7 +11,7 @@ import { BreadCrumb, PropertyDetailLoader } from '../AllFiles';
 const cardData = [
     {
         id: 1,
-        img: '/image/pexels-luis-yanez-57302-206172.jpg',
+        img: '/image/pexels-luis-yanez-57302-206172.webp',
         title: " 1192 serenity residence",
         type: '2 Flats',
         price: 350000,
@@ -21,7 +21,7 @@ const cardData = [
     },
     {
         id: 2,
-        img: '/image/pexels-pixabay-53610.jpg',
+        img: '/image/pexels-pixabay-53610.webp',
         title: 'Golden deluxe luxury residence',
         type: '4 Flats',
         price: 950000,
@@ -30,7 +30,7 @@ const cardData = [
     },
     {
         id: 3,
-        img: '/image/pexels-pixabay-280216.jpg',
+        img: '/image/pexels-pixabay-280216.webp',
         title: 'Executive luxury suite.',
         type: '3 Flats',
         price: 450000,
@@ -39,7 +39,7 @@ const cardData = [
     },
     {
         id: 4,
-        img: '/image/pexels-julia-kuzenkov-442028-1974596.jpg',
+        img: '/image/pexels-julia-kuzenkov-442028-1974596.webp',
         title: '303 bachelor row apartment',
         type: '1 Flats',
         price: 190000,
@@ -128,3 +128,4 @@ const ProperytDetail = () => {
 }
 
 export default ProperytDetail
+
