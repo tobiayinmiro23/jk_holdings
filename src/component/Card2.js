@@ -1,59 +1,59 @@
 import React from 'react'
 
 const Card2 = () => {
-    const cardData = [
+     const cardData = [
         {
             id: 1,
-            img: '/image/pexels-pixabay-53610.jpg',
+            img: '/image/pexels-pixabay-53610.webp',
             heading: '3 bedroom duplex 3 bedroom duplex 3 bedroom duplex',
             info: 'Alcon woji road portharcourt',
             price: 'N600,00'
         },
         {
             id: 2,
-            img: '/image/pexels-pixabay-53610.jpg',
+            img: '/image/pexels-pixabay-53610.webp',
             heading: '3 bedroom duplex',
             info: 'Alcon woji road portharcourt',
             price: 'N600,00'
         },
         {
             id: 3,
-            img: '/image/pexels-pixabay-53610.jpg',
+            img: '/image/pexels-pixabay-53610.webp',
             heading: '3 bedroom duplex',
             info: 'Alcon woji road portharcourt',
             price: 'N600,00'
         },
         {
             id: 4,
-            img: '/image/pexels-pixabay-53610.jpg',
+            img: '/image/pexels-pixabay-53610.webp',
             heading: '3 bedroom duplex',
             info: 'Alcon woji road portharcourt',
             price: 'N600,00'
         },
         {
             id: 5,
-            img: '/image/pexels-pixabay-53610.jpg',
+            img: '/image/pexels-pixabay-53610.webp',
             heading: '3 bedroom duplex',
             info: 'Alcon woji road portharcourt',
             price: 'N600,00'
         },
         {
             id: 6,
-            img: '/image/pexels-pixabay-53610.jpg',
+            img: '/image/pexels-pixabay-53610.webp',
             heading: '3 bedroom duplex',
             info: 'Alcon woji road portharcourt',
             price: 'N600,00'
         },
         {
             id: 7,
-            img: '/image/pexels-pixabay-53610.jpg',
+            img: '/image/pexels-pixabay-53610.webp',
             heading: '3 bedroom duplex',
             info: 'Alcon woji road portharcourt',
             price: 'N600,00'
         },
         {
             id: 8,
-            img: '/image/pexels-pixabay-53610.jpg',
+            img: '/image/pexels-pixabay-53610.webp',
             heading: '3 bedroom duplex',
             info: 'Alcon woji road portharcourt',
             price: 'N600,00'
@@ -76,5 +76,6 @@ const Card2 = () => {
         </div>
     )
 }
+
 
 export default Card2
