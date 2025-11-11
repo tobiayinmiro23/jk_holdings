@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import BgImg from '../assets/alexey-aladashvili-IMnQjDu1e5I-unsplash.jpg'
+import BgImg from '../assets/alexey-aladashvili-IMnQjDu1e5I-unsplash.webp'
 
 const Index = () => {
     return (
@@ -31,5 +31,6 @@ const Index = () => {
         </div>
     )
 }
+
 
 export default Index
