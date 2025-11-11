@@ -6,18 +6,13 @@ import BedRoundedIcon from '@mui/icons-material/BedRounded';
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
 import clock from '../assets/clock.png'
 import { Link } from 'react-router-dom';
-import Img1 from '../assets/pexels-luis-yanez-57302-206172.jpg'
-import Img2 from '../assets/pexels-pixabay-53610.jpg'
-import Img3 from '../assets/pexels-pixabay-280216.jpg'
-import Img4 from '../assets/pexels-julia-kuzenkov-442028-1974596.jpg'
-
 
 
 const Card = () => {
-    const cardData = [
+      const cardData = [
         {
             id: 1,
-            img: Img1,
+            img: '/image/pexels-luis-yanez-57302-206172.webp',
             title: " 1192 serenity residence",
             type: '2 Flats',
             price: 350000,
@@ -28,7 +23,7 @@ const Card = () => {
         {
             id: 2,
             title: 'Golden deluxe luxury residence',
-            img: Img2,
+            img: '/image/pexels-pixabay-53610.webp',
             type: '4 Flats',
             price: 950000,
             location: 'Port hart court',
@@ -36,7 +31,7 @@ const Card = () => {
         },
         {
             id: 3,
-            img: Img3,
+            img: '/image/pexels-pixabay-280216.webp',
             title: 'Executive luxury suite.',
             type: '3 Flats',
             price: 450000,
@@ -45,7 +40,7 @@ const Card = () => {
         },
         {
             id: 4,
-            img: Img4,
+            img: '/image/pexels-julia-kuzenkov-442028-1974596.webp',
             title: '303 bachelor row apartment',
             type: '1 Flats',
             price: 190000,
@@ -118,4 +113,5 @@ const Card = () => {
 }
 
 export default Card
+
 
