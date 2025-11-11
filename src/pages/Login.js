@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Input } from '../AllFiles'
 import { Link } from 'react-router-dom'
-import BgImg from '../assets/alexey-aladashvili-IMnQjDu1e5I-unsplash.jpg'
+import BgImg from '../assets/alexey-aladashvili-IMnQjDu1e5I-unsplash.webp'
 const Login = () => {
     return (
         <div className='flex items-center justify-center '>
@@ -21,5 +21,6 @@ const Login = () => {
         </div>
     )
 }
+
 
 export default Login
