@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Button, Input, PopUpMessageWithAutoCancel } from '../AllFiles'
-import BgImg from '../assets/alexey-aladashvili-IMnQjDu1e5I-unsplash.jpg'
+import BgImg from '../assets/alexey-aladashvili-IMnQjDu1e5I-unsplash.webp'
 import { displayPopUpMessage, cancelPopUP } from '../helperFunction/popUp';
 
 
@@ -34,5 +34,6 @@ const SignUp = () => {
         </div>
     )
 }
+
 
 export default SignUp
