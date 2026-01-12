@@ -9,10 +9,10 @@ import { Link } from 'react-router-dom';
 
 
 const Card = () => {
-      const cardData = [
+     const cardData = [
         {
             id: 1,
-            img: '/image/pexels-luis-yanez-57302-206172.webp',
+            img: '/image/pexels-luis-yanez-57302-206172-card.webp',
             title: " 1192 serenity residence",
             type: '2 Flats',
             price: 350000,
@@ -23,7 +23,7 @@ const Card = () => {
         {
             id: 2,
             title: 'Golden deluxe luxury residence',
-            img: '/image/pexels-pixabay-53610.webp',
+            img: '/image/pexels-pixabay-53610-card.webp',
             type: '4 Flats',
             price: 950000,
             location: 'Port hart court',
@@ -31,7 +31,7 @@ const Card = () => {
         },
         {
             id: 3,
-            img: '/image/pexels-pixabay-280216.webp',
+            img: '/image/pexels-pixabay-280216-card.webp',
             title: 'Executive luxury suite.',
             type: '3 Flats',
             price: 450000,
@@ -40,7 +40,7 @@ const Card = () => {
         },
         {
             id: 4,
-            img: '/image/pexels-julia-kuzenkov-442028-1974596.webp',
+            img: '/image/pexels-julia-kuzenkov-442028-1974596-card.webp',
             title: '303 bachelor row apartment',
             type: '1 Flats',
             price: 190000,
@@ -113,5 +113,6 @@ const Card = () => {
 }
 
 export default Card
+
 
 
