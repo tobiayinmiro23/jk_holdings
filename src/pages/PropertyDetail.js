@@ -6,7 +6,6 @@ import { loaderTimer } from '../helperFunction/loadingTimer'
 import MapRoundedIcon from '@mui/icons-material/MapRounded';
 import GppGoodRoundedIcon from '@mui/icons-material/GppGoodRounded';
 import { BreadCrumb, PropertyDetailLoader } from '../AllFiles';
-    window.scrollTo(0, 0)
 
 const cardData = [
     {
@@ -57,7 +56,6 @@ const ProperytDetail = () => {
 
     const id = useParams().id
     useEffect(() => {
-        window.scrollTo(0, 0)
         let data = cardData.filter((item) => item.id == id)
         data.map(item => {
             sethouseTitle(item.title)
@@ -128,4 +126,5 @@ const ProperytDetail = () => {
 }
 
 export default ProperytDetail
+
 
