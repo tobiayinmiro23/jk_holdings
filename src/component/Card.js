@@ -58,7 +58,7 @@ const Card = () => {
                         <div className='flex items-start'>
                             <div className='max-[1409px]:w-[45%] max-[1270px]:w-[50%] max-[860px]:w-[53%] '>
                                 <Link className='w-[fit-content]' to={`/DashBoard/PropertyDetail/${item.id}`}>
-                                    <div className='w-[15rem] h-[12rem] max-[1409px]:w-[100%] max-[731px]:h-[13.5rem] max-[409px]:h-[13rem] max-[371px]:h-[12rem]'><img className='rounded-md w-[100%]' src={item.img} alt="" /></div>
+                                    <div className='w-[15rem] h-[12rem] max-[1409px]:w-[100%] max-[731px]:h-[13.5rem] max-[409px]:h-[13rem] max-[371px]:h-[12rem]'><img className='rounded-md w-[100%]' loading='eager' src={item.img} alt="property-img" /></div>
                                 </Link>
                             </div>
                             <div className='w-[17rem] ml-[0.9rem] max-[1409px]:w-[55%] max-[1279px]:ml-[0.3rem] max-[1270px]:w-[50%] max-[860px]:w-[47%]'>
@@ -113,6 +113,7 @@ const Card = () => {
 }
 
 export default Card
+
 
 
 
