@@ -14,12 +14,14 @@ const Property = () => {
 
     return (
         <div className={mobile && 'hidden'}>
-            <div className='bg-[#f7f7f9] '>
-                {cardLoader ? <CardLoader /> : <Card />}
+            <div className='bg-[#f7f7f9] relative '>
+                {cardLoader && <div className='absolute top-0 left-0 w-[100%]'><CardLoader /></div>}
+                <Card />
             </div>
         </div>
 
     )
 }
+
 
 export default Property
