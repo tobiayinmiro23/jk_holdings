@@ -69,7 +69,7 @@ A property and tenant management platform.
 ## 📦 Dependencies
 
 - **mui/material**:  *for reusable material ui component*
-- **mui/joy**:  *for reusable material ui component*
+- **mui/joy**:  *A newer, more flexible design system from MUI for ui component*
 - **mui/x-charts**:  *for reusable material ui chart component*
 - **mui/icons-material**:  *for icons*
 - **emotion/styled**:  *for styling material ui component*  
