@@ -7,16 +7,15 @@ A property and tenant management platform.
 - sign up
 - login in
 - responsive UI
-- search functionality
 - loader
-- general product section
-- laptop product section
-- phone product section
-- shoe product section
-- cloth product section
-- filter functionality
-- global state management with redux toolkit
-- integration with a backend for payment functionality using paystack
+- dashboard
+- toasts for message notification
+- Analytical charts
+- add property functionality
+- view property functionality
+- add tenant functionality
+- view tenants functionality 
+
 
 
 ## 📋 Prerequisites
@@ -29,12 +28,12 @@ A property and tenant management platform.
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/tobiayinmiro23/skydome2.0.git
+   git clone https://github.com/tobiayinmiro23/jk_holdings.git
    ```
 
 2. **Enter the directory**
    ```bash
-   cd skydome2.0
+   cd jk_holdings
    ```
    
 3. **Install dependencies**
@@ -54,14 +53,13 @@ A property and tenant management platform.
 ├── public/           
 │   └── image/          # Stores images accessible as static assets
 ├── src/                # Main source code
+│   ├── assets/        # static files
 │   ├── components/     # Reusable UI components
+│       └── charts/          # For storing different charts
+│       └── loaders/          # loader skeleton for different components
+│   ├── context/     # For global state management
 │   ├── pages/          # Application screens
 │   ├── helper-function/ # Reusable utility/helper functions
-│   ├── database/           # Static or textual data used in the project
-│   ├── features/           # code for global state management using redux toolkit
-│       └── cart/          # State management for handling cart
-│       └── checkout/          # State management for handling checkout
-│       └── home/          # State management for handling add to cart and menu display 
 │   ├── AllFiles.jsx    # Centralized imports and exports for easy access to all components and pages from a single file
 └── README.md           # Project documentation
 
@@ -70,14 +68,12 @@ A property and tenant management platform.
 
 ## 📦 Dependencies
 
-- **mui/material**:  *for reusable material ui component*  
+- **mui/material**:  *for reusable material ui component*
+- **mui/joy**:  *for reusable material ui component*
+- **mui/x-charts**:  *for reusable material ui chart component*
+- **mui/icons-material**:  *for icons*
 - **emotion/styled**:  *for styling material ui component*  
 - **tailwind css**:  *for styling html elements*  
-- **react-slick**:  *for creating slideable image gallery/carousel*  
-- **slick-carousel**:  *for styling the react-slick slideable image gallery/carousel*  
 - **react-router-dom**:  *for navigating*  
-- **axios**:  *for handling http requests*  
-- **firebase**:  *baas used for authentication in this project*  
-- **reduxjs/toolkit**:  *for handling global state management*  
-- **ui/icons-material**:  *for icons*
+- **react-spinners**:  *for loading animation*  
 
